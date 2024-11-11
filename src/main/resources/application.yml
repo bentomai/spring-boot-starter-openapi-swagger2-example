@@ -1,0 +1,20 @@
+spring:
+  application:
+    name: spring-boot-starter-openapi-swagger2-example
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: true
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    tags-sorter: alpha
+  group-configs:
+    - group: 'test'
+      display-name: '系统测试模块'
+      paths-to-match:
+      - '/swagger2/**'
+      - '/swagger3/**'
+      packages-to-scan: io.github.bentomai
+
